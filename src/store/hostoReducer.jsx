@@ -2,6 +2,7 @@ const initialState = {
     data: [],
     loading: false,
     error: null,
+    ID:'',
 };
 
 const hostoReducer = (state = initialState, action) => {
@@ -23,6 +24,11 @@ const hostoReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 error: action.payload,
+            };
+        case 'SET_ID':
+            return {
+                ...state,
+                ID: action.payload,
             };
         default:
             return state;
