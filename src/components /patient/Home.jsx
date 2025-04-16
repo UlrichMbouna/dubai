@@ -119,6 +119,7 @@ const Home = () => {
                 console.log("Données du client enregistrées avec succès : ", res);
                 render();
                 handleudpatemontant();
+                window.location.reload();
             })
             .catch((err) => {
                 console.error("Erreur lors de l'enregistrement des données du client : ", err);
